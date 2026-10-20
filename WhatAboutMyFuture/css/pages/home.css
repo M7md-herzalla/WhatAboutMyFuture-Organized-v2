@@ -4,7 +4,86 @@
   margin-top: 40px;
   font-size: 60px;
 }
+.page-hero{
+  min-height: 40vh;
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+}
+.hero-visual{
+width: 70%;
+ height: clamp(340px, 40vw, 540px);
+padding: 10px;
+overflow: hidden;
+position: relative;
+isolation: isolate;
+border-radius:15px ;
+}
+.hero-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1);
 
+  transition:
+    opacity 1s ease,
+    transform 6s ease;
+}
+
+.hero-image.is-active {
+  opacity: 1;
+  transform: scale(1.04);
+}
+.hero-image:nth-child(1){
+  animation-delay:0s;
+}
+.hero-image:nth-child(2){
+  animation-delay:-12s;
+}
+.hero-image:nth-child(2){
+  animation-delay:-6s;
+}
+@keyframes hero-slider{
+  0%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  28%{
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  33.333%,94.444%{
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes hero-morph {
+  0%,
+  100% {
+    border-radius: 36% 64% 55% 45% / 45% 40% 60% 55%;
+  }
+
+  50% {
+    border-radius: 60% 40% 35% 65% / 55% 60% 40% 45%;
+  }
+}
+.hero-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   display: block;
+}
+.hero-content{
+  
+  align-self: center;
+  width: 30%;
+  padding: 40px;
+
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -104,6 +183,27 @@
 
 @media (max-width: 768px) {
 
+   .page-home .page-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 18px;
+  }
+
+  .page-home .hero-content {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .page-home .hero-visual {
+    width: 100%;
+    min-width: 0;
+    height: clamp(240px, 65vw, 380px);
+    padding: 0;
+  }
   .flow-section {
     padding: 50px 18px;
   }
@@ -113,14 +213,45 @@
     max-width: 300px;
   }
 
-  .page-hero .btn-primary {
-    width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
 
   .cards {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .page-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+
+  }
+  .page-home .hero-visual {
+    width: 100%;
+    min-width: 0;
+    height: clamp(240px, 65vw, 380px);
+    padding: 0;
+  }
+
+  .hero-content {
+    
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-visual {
+    height: clamp(260px, 60vw, 420px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual {
+    animation: none;
+  }
+
+  .hero-image {
+    transition: none;
+    transform: none;
   }
 }

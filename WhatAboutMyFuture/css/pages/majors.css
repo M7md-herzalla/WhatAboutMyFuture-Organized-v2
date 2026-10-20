@@ -1,5 +1,10 @@
 /* Faculty overview and the faculty/major directory share this layout. */
 
+
+body{
+  padding: 0%;
+  margin: 0%;
+}
 .faculty-block {
   background: var(--surface);
   border: 1px solid var(--border);

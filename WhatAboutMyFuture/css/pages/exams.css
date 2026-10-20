@@ -13,7 +13,11 @@
   text-align: center;
   margin-block: 30px;
 }
+.exams-content{
+  display: flex;
+  gap: 25px;
 
+}
 .exams-section {
   max-width: 1250px;
   margin: 50px auto;
@@ -593,7 +597,7 @@
   color: var(--text-dark);
   line-height: 1.8;
 }
-/* ---------- الشاشات الصغيرة ---------- */
+
 
 @media (max-width: 850px) {
 
@@ -626,7 +630,12 @@
   .analysis-result {
     padding-inline: 12px;
   }
+  .exams-content{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
 
+}
   .exam-box {
     padding: 24px 18px;
   }
@@ -656,6 +665,14 @@
   .analysis-loader-box p {
     font-size: 15px;
   }
+}
+@media (max-width: 440px) {
+.exams-content{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
+
+}
 }
 
 .analysis-loader { display: none; }

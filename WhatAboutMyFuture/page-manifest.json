@@ -1,0 +1,473 @@
+[
+  {
+    "file": "index.html",
+    "css": "css/pages/home.css",
+    "scripts": []
+  },
+  {
+    "file": "exams.html",
+    "css": "css/pages/exams.css",
+    "scripts": [
+      "js/config.js",
+      "js/data/questions.js",
+      "js/pages/exams.js"
+    ]
+  },
+  {
+    "file": "fields.html",
+    "css": "css/pages/fields.css",
+    "scripts": [
+      "js/utils.js",
+      "js/data/majors.js",
+      "js/data/fields-config.js",
+      "js/pages/fields.js"
+    ]
+  },
+  {
+    "file": "admission.html",
+    "css": "css/pages/admission.css",
+    "scripts": [
+      "js/utils.js",
+      "js/data/universities.js",
+      "js/pages/admission.js"
+    ]
+  },
+  {
+    "file": "ai.html",
+    "css": "css/pages/ai.css",
+    "scripts": [
+      "js/config.js",
+      "js/pages/ai.js"
+    ]
+  },
+  {
+    "file": "majors.html",
+    "css": "css/pages/majors.css",
+    "scripts": []
+  },
+  {
+    "file": "majors2.html",
+    "css": "css/pages/majors.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/agri-economics-extension.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/animal-production.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/biology.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/biotechnology.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/chemistry.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/english.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/food-nutrition-processing.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/geography.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/geology.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/history.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-accounting.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-archaeology.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-architecture.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-business-administration.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-classroom-teacher.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-computer-science.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-curriculum-teaching-methods.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-digital-business.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-digital-marketing.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-digital-media.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-educational-administration.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-finance-banking.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-fine-arts.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-fiqh.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-graphic-design.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-hospitality-management.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-hotel-management.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-hr-management.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-interior-design.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-international-relations.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-islamic-banking.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-journalism.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-law.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-marine-science.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-marketing.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-mis.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-music-performance.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-music.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-painting-sculpture.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-physical-education.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-political-science.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-psychological-counseling.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-public-relations.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-radio-tv.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-special-education.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-sports-training.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-strategic-studies.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-supply-chain-logistics.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-tourism.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-urban-design.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/major-usul-aldeen.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/math.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/philosophy.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/physics.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/plant-production.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/plant-protection.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/psychology.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/sociology.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/translation.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الاشعة والتصوير الطبي.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الامن السيبراني.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/التغذية السريرية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/التمريض.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/السمع والنطق.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الصيدلة.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الطب البشري.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/العلاج الطبيعي.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/العلاج الوظيفي.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/اللغة العربية وادابها.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/المختبرات الطبية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة الحيوية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة الصناعية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة الكهربائية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة الكيميائية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة المدنية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة المعمارية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/الهندسة الميكانيكية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/دكتور صيدلة.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/طب الاسنان.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/علم البيانات.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/نظم المعلومات الادارية.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/هندسة البرمجيات.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/هندسة الحاسوب.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  },
+  {
+    "file": "majors/هندسة الميكالترونكس.html",
+    "css": "css/pages/major-detail.css",
+    "scripts": []
+  }
+]

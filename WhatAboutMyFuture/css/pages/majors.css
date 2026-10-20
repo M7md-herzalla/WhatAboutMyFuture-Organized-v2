@@ -1,0 +1,107 @@
+/* Faculty overview and the faculty/major directory share this layout. */
+
+.faculty-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 32px;
+  margin-bottom: 28px;
+  scroll-margin-top: 100px;
+}
+
+.faculty-block-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.faculty-block-head .icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(155deg, var(--button-bg), var(--blue-deep));
+  color: #FFF;
+  font-size: 24px;
+}
+
+.faculty-block-head h2 {
+  color: var(--blue-main);
+  margin-bottom: 4px;
+}
+
+.faculty-block-head p {
+  color: var(--text-mid);
+  font-size: var(--font-caption);
+}
+
+.major-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.major-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: var(--font-card-body);
+  color: var(--heading-color);
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.major-pill:hover {
+  background: var(--button-bg);
+  color: #FFF;
+  border-color: var(--button-bg);
+}
+
+.major-pill .arrow {
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+
+  .major-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .faculty-block {
+    padding: 22px 18px;
+  }
+
+  .faculty-block-head {
+    gap: 12px;
+  }
+
+  .faculty-block-head .icon {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .major-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.directory-content { padding-top: 28px; }

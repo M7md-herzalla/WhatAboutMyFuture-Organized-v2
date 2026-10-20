@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      اسأل الذكاء الاصطناعي - ماذا عن مستقبلي؟
+    </title>
+    <script src="shared/theme-init.js">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/pages/ai.css">
+    <script src="shared/site.js" defer>
+    </script>
+    <script src="js/config.js" defer>
+    </script>
+    <script src="js/pages/ai.js" defer>
+    </script>
+  </head>
+  <body class="page-ai" data-navigation="ai">
+    <header id="site-header">
+    </header>
+    <section class="ai-hero">
+      <div class="container">
+        <h1>
+          اسأل الذكاء الاصطناعي عن مستقبلك المهني 🤖
+        </h1>
+        <p>
+          مساعد ذكي ومجاني يجيبك عن أسئلتك حول التخصصات الجامعية، مسارات الدراسة، وفرص العمل في الأردن.
+        </p>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <div class="chat-wrap container">
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="bot-icon">
+            🤖
+          </div>
+          <div>
+            <b>
+              مساعد التخصصات الذكي
+            </b>
+            <span>
+              اسأل عن أي تخصص أو مسار مهني
+            </span>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg bot">
+            أهلاً بك 👋 أنا مساعدك الذكي، اسألني عن أي تخصص جامعي، متطلبات القبول، أو فرص العمل بعد التخرج، وسأساعدك بكل سرور.
+          </div>
+        </div>
+        <div class="suggestions" id="suggestions">
+          <span class="suggestion-chip">
+            ما هو أفضل تخصص لمن يحب الرياضيات؟
+          </span>
+          <span class="suggestion-chip">
+            ما الفرق بين الهندسة والحاسوب؟
+          </span>
+          <span class="suggestion-chip">
+            تخصصات فيها فرص عمل كبيرة بالأردن؟
+          </span>
+        </div>
+        <div class="error-note" id="errorNote">
+          حدث خطأ أثناء الاتصال، حاول مرة أخرى.
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="userInput" placeholder="اكتب سؤالك هنا...">
+          <button id="sendBtn">
+            إرسال
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer id="site-footer" class="footer">
+    </footer>
+  </body>
+</html>

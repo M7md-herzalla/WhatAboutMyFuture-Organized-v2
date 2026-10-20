@@ -1,0 +1,691 @@
+/* ============================================================
+   exams-css.css
+   المتغيرات في css/theme.css والعناصر المشتركة في css/shared.css.
+   هذا الملف خاص بالامتحانات والتقرير فقط.
+   ============================================================ */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.analysis-actions {
+  text-align: center;
+  margin-block: 30px;
+}
+
+.exams-section {
+  max-width: 1250px;
+  margin: 50px auto;
+  padding: 30px 24px;
+  line-height: 1.8;
+}
+/* ---------- مقدمة الصفحة ---------- */
+
+.exams-intro {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  margin-bottom: 35px;
+  box-shadow: var(--shadow);
+}
+
+.exams-intro h1 {
+  color: var(--heading-color);
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.exams-intro p {
+  color: var(--text-mid);
+  font-size: 17px;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.exams-content {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+/* ---------- بطاقات الاختبارات ---------- */
+
+.cards-grid {
+  flex: 1.3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.exam-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exam-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.15);
+}
+
+.exam-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.exam-card h3 {
+  color: var(--blue-main);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.exam-card p {
+  color: var(--text-mid);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.exam-card button {
+  background: var(--blue-main);
+  color: var(--text-on-color);
+  border: none;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: 0.3s;
+}
+
+.exam-card button:hover {
+  background: var(--blue-deep);
+}
+
+.exam-completed {
+  background: #16A34A !important;
+  color: #fff;
+  cursor: default;
+}
+/* ---------- لوحة كيف تعمل الاختبارات ---------- */
+
+.info-panel {
+  flex: 0.9;
+  background: linear-gradient(160deg, var(--blue-main), var(--blue-deep));
+  color: #fff;
+  border-radius: 22px;
+  padding: 35px 28px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  min-height: 520px;
+}
+
+.info-panel h2 {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.step span {
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  color: var(--blue-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #EFF6FF;
+}
+
+.note-box {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* ---------- منطقة الأسئلة ---------- */
+
+.exam-area,
+.analysis-loader,
+.analysis-result {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.exam-area {
+  margin-block: 60px;
+}
+
+.exam-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: var(--shadow);
+}
+
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.exam-header h2 {
+  color: var(--blue-main);
+  font-size: 24px;
+}
+
+.progress-text {
+  color: var(--text-mid);
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--blue-main);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.question-title {
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  line-height: 1.8;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+.options label {
+  background: var(--blue-light);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+              border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.options label:hover {
+  transform: scale(1.015);
+  border-color: var(--blue-main);
+  background: var(--card-hover, var(--blue-light));
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.14);
+}
+
+.options label:has(input:checked) {
+  border-color: var(--blue-main);
+  background: color-mix(in srgb, var(--blue-main) 16%, var(--surface));
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+  transform: scale(1.01);
+}
+
+.options input {
+  margin-left: 8px;
+  accent-color: var(--blue-main);
+}
+
+.exam-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.exam-buttons button,
+.finish-exam-btn {
+  background: var(--blue-main);
+  color: var(--text-on-color);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.exam-buttons button:hover,
+.finish-exam-btn:hover {
+  background: var(--blue-deep);
+}
+
+.exam-buttons button:disabled {
+  background: #94A3B8;
+  cursor: not-allowed;
+}
+/* ---------- بطاقة إنهاء الاختبار ---------- */
+
+.result-box {
+  width: min(100%, 810px);
+  margin: 40px auto;
+  padding: 40px 30px;
+  text-align: center;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.result-box h2 {
+  color: var(--blue-main);
+  margin-bottom: 15px;
+}
+
+.result-box p {
+  color: var(--text-mid);
+  line-height: 1.8;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+/* ---------- شاشة التحليل ---------- */
+
+.analysis-loader {
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.analysis-loader-box {
+  width: min(100%, 650px);
+  min-height: 310px;
+  margin-inline: auto;
+  padding: 45px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  color: var(--text-dark);
+}
+
+.analysis-loader-box h2 {
+  margin: 0 0 14px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--blue-main);
+}
+
+.analysis-loader-box p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text-mid);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.analysis-progress {
+  width: 100%;
+  max-width: 520px;
+  height: 15px;
+  margin: 10px auto 16px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.analysis-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: var(--blue-main);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+#analysisProgressText {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  min-height: 38px;
+  margin-top: 6px;
+  padding: 7px 16px;
+  background: var(--blue-light);
+  border-radius: 999px;
+  color: var(--blue-main);
+  font-size: 18px;
+  font-weight: 800;
+}
+/* ---------- التقرير النهائي ---------- */
+
+.analysis-result {
+  display: none;
+  margin-block: 50px;
+}
+
+.analysis-report {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  background: var(--surface);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  direction: rtl;
+  text-align: right;
+}
+
+.analysis-report p {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.report-header {
+  text-align: center;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.report-header h2 {
+  color: var(--blue-main);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.report-header p {
+  color: var(--text-mid);
+  font-size: 16px;
+}
+
+.report-section {
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.report-section h3 {
+  color: var(--blue-main);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.report-section p {
+  color: var(--text-dark);
+  line-height: 1.9;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.profile-card h3 {
+  color: var(--blue-main);
+  margin-bottom: 12px;
+  font-size: 19px;
+}
+
+.profile-card p {
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+.report-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.report-list {
+  list-style: none;
+  padding: 0;
+}
+
+.report-list li {
+  position: relative;
+  padding-right: 26px;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.report-list li::before {
+  content: "✓";
+  position: absolute;
+  right: 0;
+  color: var(--blue-main);
+  font-weight: bold;
+}
+
+.majors-section {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.majors-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.major-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+}
+
+.major-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.major-rank {
+  width: 42px;
+  height: 42px;
+  background: var(--blue-main);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.major-card h4 {
+  color: var(--blue-main);
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+
+.score-text {
+  color: var(--text-mid);
+  font-size: 14px;
+}
+
+.score-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.score-fill {
+  height: 100%;
+  background: var(--blue-main);
+  border-radius: inherit;
+}
+
+.major-content h5 {
+  color: var(--heading-color);
+  font-size: 16px;
+  margin: 18px 0 8px;
+}
+
+.major-content p,
+.major-content li {
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+.major-content ul {
+  padding-right: 22px;
+}
+
+.development-plan {
+  padding-right: 24px;
+}
+
+.development-plan li {
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.report-disclaimer {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.report-disclaimer h3 {
+  color: #B45309;
+  margin-bottom: 10px;
+}
+
+.report-disclaimer p {
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+/* ---------- الشاشات الصغيرة ---------- */
+
+@media (max-width: 850px) {
+
+  .exams-content {
+    flex-direction: column;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-grid,
+  .report-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-report {
+    padding: 24px 18px;
+  }
+
+  .report-header h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .exam-area,
+  .analysis-loader,
+  .analysis-result {
+    padding-inline: 12px;
+  }
+
+  .exam-box {
+    padding: 24px 18px;
+  }
+
+  .result-box {
+    width: 100%;
+    margin-block: 25px;
+    padding: 28px 18px;
+  }
+
+  .analysis-loader {
+    min-height: 360px;
+    padding-block: 30px;
+  }
+
+  .analysis-loader-box {
+    width: 100%;
+    min-height: 280px;
+    padding: 34px 20px;
+    border-radius: 18px;
+  }
+
+  .analysis-loader-box h2 {
+    font-size: 24px;
+  }
+
+  .analysis-loader-box p {
+    font-size: 15px;
+  }
+}
+
+.analysis-loader { display: none; }
+#devAiButton { display: none; }
